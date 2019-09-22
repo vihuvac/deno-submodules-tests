@@ -1,0 +1,6 @@
+# IDEs / Text editors
+.idea
+.vscode
+
+# Misc
+.DS_Store
