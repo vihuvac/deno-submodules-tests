@@ -3,11 +3,15 @@
  */
 const express = require('express');
 const axios = require('axios');
+const bodyParser = require('body-parser');
 
 
 // Create the express app.
 const app = express();
 const port = 3000;
+
+// Middlewares.
+app.use(bodyParser.json());
 
 // Const variables.
 const SWAPI_URL = 'https://swapi.co/api';
