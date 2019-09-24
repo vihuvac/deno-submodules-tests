@@ -23,6 +23,17 @@ app.get('/people', async (req, res, next) => {
     next(error);
   }
 });
+app.get('/people/:id', async (req, res, next) => {
+  const { id } = req.params;
+
+  try {
+    // SWAPI returns a json formatted content by default.
+    const people = await axios.get(`${SWAPI_URL}/people/${id}`);
+    res.send(people.data);
+  } catch (error) {
+    next(error);
+  }
+});
 
 // Start the server.
 app.listen(port, () => console.log(`Sample app listening on port ${port}!`));
