@@ -1,6 +1,7 @@
 # Node files
 features/node/sample-app/node_modules
 features/node/sample-app/npm-debug.log
+features/node/sample-app/src/*.json
 
 # IDEs / Text editors
 .idea
