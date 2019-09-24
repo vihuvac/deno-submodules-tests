@@ -1,6 +1,11 @@
+# Node files
+features/node/sample-app/node_modules
+features/node/sample-app/npm-debug.log
+
 # IDEs / Text editors
 .idea
 .vscode
 
 # Misc
+*.log
 .DS_Store
