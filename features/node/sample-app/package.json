@@ -4,6 +4,7 @@
   "description": "This is a Node.js Sample App based on Express.js.",
   "main": "src/app.js",
   "scripts": {
+    "dev": "./node_modules/nodemon/bin/nodemon.js src/app.js",
     "start": "node src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
   }
 }
