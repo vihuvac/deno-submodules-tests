@@ -56,7 +56,7 @@ app.post('/people', async (req, res, next) => {
 
     // After all the data is saved, respond with a simple message within an object.
     writeStream.on('finish', () => res.send({
-      message: 'A new person has been successfully added to the star wars world.',
+      message: 'People in the star wars world has been successfully updated.',
     }));
   } catch (error) {
     next(error);
