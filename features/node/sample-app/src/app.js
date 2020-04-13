@@ -25,12 +25,12 @@ app.use(bodyParser.urlencoded(bodyParserSettings));
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
 
 // Endpoints.
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.json({ message: 'Hello World!' }));
 app.get('/houses', async (req, res, next) => {
   try {
     // The API returns a json formatted content by default.
     const houses = await axios.get(`${API_URL}/houses`);
-    res.send(houses.data);
+    res.json(houses.data);
   } catch (error) {
     next(error);
   }
@@ -41,7 +41,7 @@ app.get('/houses/:id', async (req, res, next) => {
   try {
     // SWAPI returns a json formatted content by default.
     const house = await axios.get(`${API_URL}/houses/${id}`);
-    res.send(house.data);
+    res.json(house.data);
   } catch (error) {
     next(error);
   }
@@ -95,7 +95,7 @@ app.post('/houses', async (req, res, next) => {
       next(errMsg);
     }
 
-    res.send(writeStream);
+    res.json(writeStream);
   } catch (error) {
     next(error);
   }
