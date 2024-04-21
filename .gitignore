@@ -1,7 +1,8 @@
 # Node files
-features/node/sample-app/node_modules
-features/node/sample-app/npm-debug.log
-features/node/sample-app/src/*.json
+pocs/node/sample-app/node_modules
+pocs/node/sample-app/npm-debug.log
+pocs/node/sample-app/src/*.json
+!pocs/node/sample-app/src/package.json.json
 
 # IDEs / Text editors
 .idea
